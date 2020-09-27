@@ -7,7 +7,7 @@ public class Instance {
     private Instance() {
     }
 
-    public static Instance getInstance() {
+    public synchronized static Instance getInstance() {
         if (instance == null) {
             instance = new Instance();
         }
