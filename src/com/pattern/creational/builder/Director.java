@@ -1,18 +1,18 @@
 package com.pattern.creational.builder;
 
 public class Director {
-    WebSiteBuilder builder;
+    IBuilder builder;
 
-    public void setBuilder(WebSiteBuilder builder) {
+    void setBuilder(IBuilder builder) {
         this.builder = builder;
     }
 
-    WebSite createWebSite() {
-        builder.createWebSite();
+    Car createCar() {
+        builder.createCar();
+        builder.setGPS();
         builder.setName();
-        builder.setCms();
-        builder.setPrice();
-        WebSite webSite = builder.getWebSite();
-        return webSite;
+        builder.setNumber();
+        Car car = builder.getCar();
+        return car;
     }
 }

@@ -4,8 +4,9 @@ package com.pattern.creational.builder;
 public class Builder {
     public static void main(String[] args) {
         Director director = new Director();
-        director.setBuilder(new VisitWebSiteBuilder());
-        WebSite webSite = director.createWebSite();
-        System.out.println(webSite);
+        IBuilder builder = new CarBuilder();
+        director.setBuilder(builder);
+        Car car = director.createCar();
+        System.out.println(car);
     }
 }
