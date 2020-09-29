@@ -1,4 +1,8 @@
 package com.pattern.structural.bridge;
 
-public class CppDeveloper {
+public class CppDeveloper implements Developer {
+    @Override
+    public void writeCode() {
+        System.out.print("C++ developer writes C++ code");
+    }
 }
